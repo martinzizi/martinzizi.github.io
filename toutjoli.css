@@ -1,0 +1,30 @@
+body {
+    background: pink;
+    font-family: 'Questrial', sans-serif;
+}
+
+
+
+.premierePartie {
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    align-items: center;
+
+
+}
+
+
+
+#bouton {
+    font-size: 300%;
+}
+
+.deuxiemePartie {
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
