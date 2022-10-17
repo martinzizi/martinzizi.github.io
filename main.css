@@ -339,24 +339,20 @@ body.sp {
 
 /* PRODUCT PAGE */
 
-.PRODUCT_OVERVIEW {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 50px 50px;
-    width: 50%;
-}
-
 
 body.product {
     margin: 0px;
     padding: 0px;
     background: rgb(36, 37, 38);
     font-family: 'Questrial', sans-serif;
+
+    
     background-image: url(FinalCoverSuranus.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
+    
+    
 
 }
 
@@ -365,14 +361,42 @@ body.product {
 	width: 0%;
     height: 100vh;
     filter: brightness(0.2);
+    
 }
 
 
+.PRODUCT_OVERVIEW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    background-color: rgb(36, 37, 38);
+    
 
+    
 
+}
 
+.PRODUCT_OVERVIEW {
+    border-radius: 1%;
+    box-shadow: 2px 2px 50px -10px black;
+    position: relative;
+    align-self: center;
+    
 
+}
 
+.PRODUCT_OVERVIEW img{
+    width: 20%;
+    
+}
+
+#descproduct {
+    font-size: 150%;
+    padding-left: 15%;
+    
+}
 
 
 
