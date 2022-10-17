@@ -339,10 +339,25 @@ body.sp {
 
 /* PRODUCT PAGE */
 
-.bgtruc {
+
+body.product {
+    margin: 0px;
+    padding: 0px;
+    background: rgb(36, 37, 38);
+    font-family: 'Questrial', sans-serif;
     background-image: url(FinalCoverSuranus.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: blur(20px);
+
 }
 
+.blur {
+    background: rgba(255, 255, 255, 0.2); 
+    height: 100vh;
+	width: 0%;
+    filter: brightness(0.2);
+}
 
 
 
