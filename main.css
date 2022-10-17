@@ -282,7 +282,7 @@ body.sp {
 
 }
 
-.kontaktCategory {
+.kontaktTitre {
     font-size: 130%;
     display: flex;
     padding: 2% 2%;
@@ -291,7 +291,7 @@ body.sp {
 
 
 
-.Suranus {
+.KSP {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -306,19 +306,18 @@ body.sp {
 
 }
 
-#Suranus {
+#KSPid {
     border-radius: 1%;
-    width: 50%;
+    width: 80%;
     box-shadow: 2px 2px 50px -10px black;
 
 }
 
-.Suranus img {
+.KSP img {
     transition: all 0.1s ease 0s;
-    width: 40%;
 }
 
-.Suranus img:hover {
+.KSP img:hover {
     transform: scale(1.05);
     cursor: pointer;
     filter: brightness(1.05);
