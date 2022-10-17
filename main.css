@@ -223,6 +223,13 @@ body.sp {
     padding: 3% 0%;
 }
 
+.Suranus a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .ovsp {
     display: flex;
     justify-content: center;
@@ -234,8 +241,12 @@ body.sp {
     border-radius: 1%;
     width: 50%;
     box-shadow: 2px 2px 50px -10px black;
+    position: relative;
+    align-self: center;
 
 }
+
+
 
 .Suranus img {
     transition: all 0.1s ease 0s;
