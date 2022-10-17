@@ -339,12 +339,13 @@ body.sp {
 
 
 /* EASTER EGGS !!*/
-#joel {
-    width: 10%;
+.joel {
+    width: 4%;
     opacity: 5%;
+    transition: all 0.1s ease 0s;
 }
 
-#joel img:hover {
-    width: 10%;
+.joel:hover {
+    width: 4%;
     opacity: 100%;
 }
