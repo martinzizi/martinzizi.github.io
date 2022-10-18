@@ -366,37 +366,59 @@ body.product {
 
 
 .PRODUCT_OVERVIEW {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 300px 300px;
+    padding: 0%;
+}
+
+.productImage {
+
+    transform: scale(1.2);
     display: flex;
-    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+}
+
+/*******.PRODUCT_OVERVIEW {
+    border-style: solid;
+    border-color: red;
+}*********/
+
+.descProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 25%;
+}
+
+#miniDesc {
+    display: flex;
+    align-items: left;
+    justify-content: left;
     padding: 5%;
-    background-color: rgb(36, 37, 38);
-    
-
-    
-
+    padding-right: 0%;
 }
 
-.PRODUCT_OVERVIEW {
-    border-radius: 1%;
-    box-shadow: 2px 2px 50px -10px black;
-    position: relative;
-    align-self: center;
-    
 
-}
 
-.PRODUCT_OVERVIEW img{
-    width: 20%;
-    
-}
 
-#descproduct {
-    font-size: 150%;
-    padding-left: 15%;
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
