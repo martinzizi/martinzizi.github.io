@@ -41,23 +41,26 @@
 
 
         <div class="colonne">
-            <img id="cover" src="FinalCoverSuranus.png" alt="superCIVER"></a>
-            
+            <img id="cover" onclick="playPause()" src="FinalCoverSuranus.png" alt="superCIVER"></a>
 
+            <div class="autreColonne">
+                <audio id="audio">
+                    <source src="PabloLive.mp3" type="audio/mp3">
+                </audio>
+            
+                <h1 id="playPauseBTN" onclick="playPause()">🔈</h1>
         </div>
 
-        <div>
-            <audio id="audio">
-                <source src="PabloLive.mp3" type="audio/mp3">
-            </audio>
+
         
-            <button id="playPauseBTN" onclick="playPause()">Play ►</button>
-            <button onclick="stop()">Stop ▋</button>
+
+        
 
 
 
 
-
+    </div>
+    
     <div class="blur"></div>
 
 

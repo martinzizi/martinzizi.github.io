@@ -445,6 +445,7 @@ body.product {
 /* Nouveau Try pour la Product Page !!*/
 
 .colonne {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -456,8 +457,22 @@ body.product {
     width: 20%;
 }
 
+.autreColonne {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 400%;
+    transition: all 0.1s ease 0s;
+    margin-top: 5%;
+    width: 20%;
+}
 
-
+.autreColonne:hover{
+    font-size: 420%;
+    cursor: pointer;
+    
+}
 
 
 
