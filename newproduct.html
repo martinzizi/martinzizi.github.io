@@ -9,11 +9,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"> 
 
+
     </head>
 
 
 
 <body class="product">
+
 
 
 
@@ -35,49 +37,32 @@
         </header>
 
 
-    </div>
-
-    <div class="samplepack">
-        <h1>Sample Packs &#128230;</h1>
-    </div>
 
 
-   
 
-    <div class="PRODUCT_OVERVIEW">
-        <div class="productImage">
-            <img class="icon" src="FinalCoverSuranus.png" alt="">
-        </div>
-        
-        <div class="descProduct">
-            <h1 id="miniTitre">SURANUS GUITAR LOOP KIT</h1>
-            <p id="miniDesc"><b>[+17 Guitar Loops !]</b></p>
-            <p id="miniDesc">Genres : Drill, Hip-Hop, Jazz, Funk, etc. </p>
-            <p id="miniPrix"> (Price : 6.99EUR) </p>
-        </div>
+        <div class="colonne">
+            <img id="cover" src="FinalCoverSuranus.png" alt="superCIVER"></a>
             
 
+        </div>
+
+        <div>
+            <audio id="audio">
+                <source src="PabloLive.mp3" type="audio/mp3">
+            </audio>
         
-        
-        
-        <div class="dlGrid"> </div>
+            <button id="playPauseBTN" onclick="playPause()">Play ►</button>
+            <button onclick="stop()">Stop ▋</button>
 
 
-        
 
-        
-
-
-    </div>
-    
-    <div class="audioex">
-        <audio src="PabloLive.mp3" controls autoplay></audio>
-    </div>
-
-    
 
 
     <div class="blur"></div>
+
+
+
+    <script src="sound.js"></script>
 
 
 
