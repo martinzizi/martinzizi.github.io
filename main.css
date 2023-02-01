@@ -192,6 +192,15 @@ hr.divider {
   }
 
 
+#fractalBG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+}
+
+
   /* SAMPLE PACKS JUSTE EN DESSOUS */
 
 body.sp {
@@ -299,7 +308,7 @@ body.sp {
     font-size: 130%;
     display: flex;
     padding: 2% 2%;
-    color: white;
+    color: rgb(223, 30, 30);
 }
 
 
@@ -563,6 +572,8 @@ body.product {
       padding: 0 40px;
     }
   }
+
+/* Into The Multiverse*/
 
 
 
