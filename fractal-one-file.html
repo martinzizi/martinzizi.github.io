@@ -13,21 +13,25 @@
     <p>Press next to get random secret songs</p>
 
     <div class="video">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/hlsITOlGdJI">
+        <iframe id="video-frame" width="640" height="360" src="https://www.youtube.com/embed/hlsITOlGdJI">
         </iframe>
     </div>
 
+
+    <div class="copierURL">
+        <a id="copy-url-button" href="#">
+            <span id="texteDiscret">copy link</span>
+        </a>
+    </div>
+    
+    
+
     <div class="bouton">
         <button id="change-video-button">
-            <span>N E X T</span>
+            <span class="coolSpan">N E X T</span>
           </button>
+
     </div>
-
-
-  
-    
-
-    
 </body>
 
 <script>
@@ -38,22 +42,15 @@ document.querySelector("#change-video-button").addEventListener("click", functio
   const random_video = liste_videos[Math.floor(Math.random() * liste_videos.length)];
   const video_id = `https://www.youtube.com/embed/${random_video}`;
 
-  document.querySelector("iframe").src = `${video_id}?autoplay=1`;
+  document.querySelector("#video-frame").src = `${video_id}?autoplay=1`;
   document.querySelector("#change-video-button").classList.toggle("active");
 });
 
-
-
-
-
-
-
-
-        
-
-
-
-  </script>
+document.querySelector("#copy-url-button").addEventListener("click", function() {
+  const currentUrl = document.querySelector("#video-frame").src;
+  navigator.clipboard.writeText(currentUrl)
+});
+</script>
   
 
 
@@ -115,8 +112,25 @@ document.querySelector("#change-video-button").addEventListener("click", functio
         border-radius: 1%;
     }
 
+    .copierURL {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1%;
+    }
+
+    #copy-url-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.432);
+
+    }
+
+
     .bouton {
-        padding-top: 4%;
+        padding-top: 2%;
 
 
         display: flex;
@@ -127,6 +141,8 @@ document.querySelector("#change-video-button").addEventListener("click", functio
     #change-video-button {
         appearance: none;
     }
+
+
 
 
     #change-video-button {
@@ -146,11 +162,16 @@ document.querySelector("#change-video-button").addEventListener("click", functio
     border: 0px solid rgba(0, 0, 0, 0.6);
     }
     
-    span {
+    .coolSpan {
         color: rgb(0, 0, 0);
         font-size: 120%;
         font-weight: 500;
         letter-spacing: 0.5px;
+    }
+
+    #texteDiscret {
+        font-family: monospace;
+        
     }
     
     #change-video-button:hover {
