@@ -10,7 +10,8 @@
 </head>
 <body>
     <a href="newFractal.html"><h1>FRACTAL</h1></a>
-    <p>Press next to get random secret songs</p>
+    <!--<p>Press next to get random secret songs</p>-->
+    <p>Click on FRACTAL to see the new version !</p>
 
     <div class="video">
         <iframe id="video-frame" width="640" height="360" src="https://www.youtube.com/embed/hlsITOlGdJI">
@@ -148,6 +149,8 @@ document.querySelector("#copy-url-button").addEventListener("click", function() 
         justify-content: center;
         align-items: center;
         font-family: 'Abril Fatface', cursive;
+
+        filter: blur(0px);
     }
 
     .video {
@@ -292,6 +295,9 @@ document.querySelector("#copy-url-button").addEventListener("click", function() 
 }
 
 
+    h1:hover {
+        filter: blur(2px);
+    }
 
 </style>
 
