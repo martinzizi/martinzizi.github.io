@@ -12,9 +12,9 @@
 
 </head>
 <body>
-    <li><a href="https://google.com">Support me</a></li>
+    <a id="support" href="https://google.com">Support me</a>
 
-    <h1>FRACTAL</h1>
+    <a href="fractal-one-file.html"><h1>FRACTAL</h1></a>
     <p>More jazz, more ambient, more gems</p>
 
     <div class="video">
@@ -135,12 +135,16 @@
         font-family: 'Abril Fatface', cursive;
         min-height: 100vh;
 }
-
+    
     a {
+        text-decoration: none;
+    }
+
+    #support {
         font-family: monospace;
         color: white;
         position: fixed;
-        top: 50px;
+        top: 90px;
         right: 50px;
 }
 
