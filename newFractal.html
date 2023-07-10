@@ -157,7 +157,7 @@
             document.querySelector("#change-video-button").classList.toggle("active");
 
             // Mettre à jour le lien du bouton de téléchargement
-            const downloadUrl = `http://yt-download.org/api/single/mp3?url=https://www.youtube.com/watch?v=${random_video}`;
+            const downloadUrl = `https://yt-download.org/api/single/mp3?url=https://www.youtube.com/watch?v=${random_video}`;
             document.querySelector("#buttonApi").setAttribute("src", downloadUrl);
         });
 
