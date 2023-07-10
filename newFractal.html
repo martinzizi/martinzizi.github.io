@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>👨‍🚀 FRACTAL V2</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <li><a href="https://google.com">Support me</a></li>
+
+    <h1>FRACTAL</h1>
+    <p>More jazz, more ambient, more gems</p>
+
+    <div class="video">
+        <iframe id="video-frame" width="640" height="360" src="https://www.youtube.com/embed/aocHVcJnJl8"></iframe>
+    </div>
+
+
+    <div class="bouton">
+        <button id="link">
+            <span class="coolSpan"><i class="fas fa-link"></i></span>
+        </button>
+
+        <button id="change-video-button">
+            <span class="coolSpan">N E X T</span>
+        </button>
+
+        <button id="download-button">
+            <span class="coolSpan"><i class="fas fa-download"></i></span>
+        </button>
+          
+    </div>
+
+
+    <div class="buttonApi-container hidden">
+        <iframe id="buttonApi" src="http://yt-download.org/api/single/mp3?url=https://youtu.be/aocHVcJnJl8" allowtransparency="true" scrolling="no"></iframe>
+    </div>
+    
+
+</body>
+
+    <script>
+        const liste_ambiante = [
+            "UOD_k4qb5N8",
+            "qGFOPsF2q2Q",
+            "K5nfXT6aV0U",
+            "s4gcsHDHdxM",
+            "vOj_EmNzlUM",
+            "PY3ulUDIinM",
+            "FiwwzxBVMJQ",
+            "CyLcqrNAMUk",
+            "Q8oS_B6IaKE",
+            "yQOq8VSTvbY",
+            "EjQ9yzOwv7c",
+            "ute0CmZwSE0",
+            "pB3LjFKVj44",
+            "TnfDQJczhks",
+            "v_Ek6txXCHA",
+            "q4Qw2fr8Oak",
+            "h0abDdpLdl8",
+            "cKKZWga2164",
+            "1-vZbuSAwok",
+            "JdCvkSV7qmc",
+            "XU4Pz-L-73c",
+            "SruyTTLYtCc",
+            "SIk9KsEzJ34",
+            "-OcYQRDPks8",
+            "4Co34Wmu0gY",
+            "e3E9vx5vVck",
+            "DqUUl8s9vGw",
+            "XU4Pz-L-73c",
+            "aXvBwq29Ls4",
+            "EQRHsq1TQkc",
+            "_vFh2yKVdHQ",
+            "id_C9xoZXUs",
+            "eZ4EjU2Sfn4",
+            "zcOpgJgTIXo",
+            "1UWVOEF25c0",
+            "VTHcYM1JN44",
+            "OxbaEOEqUQ0",
+            "t00wRXugr3o",
+            "IqeyWU1zVA8",
+            "rc3kpcUkchw",
+            "EEEEL5uY3_8"
+        ];
+
+        document.querySelector("#change-video-button").addEventListener("click", function() {
+            const random_video = liste_ambiante[Math.floor(Math.random() * liste_ambiante.length)];
+            const video_id = `https://www.youtube.com/embed/${random_video}`;
+
+            document.querySelector("#video-frame").src = `${video_id}?autoplay=1`;
+            document.querySelector("#change-video-button").classList.toggle("active");
+
+            // Mettre à jour le lien du bouton de téléchargement
+            const downloadUrl = `http://yt-download.org/api/single/mp3?url=https://www.youtube.com/watch?v=${random_video}`;
+            document.querySelector("#buttonApi").setAttribute("src", downloadUrl);
+        });
+
+
+
+        document.querySelector("#download-button").addEventListener("click", function() {
+            document.querySelector(".buttonApi-container").classList.remove("hidden");
+        });
+
+
+        document.querySelector("#link").addEventListener("click", function() {
+            const currentUrl = document.querySelector("#video-frame").src;
+            navigator.clipboard.writeText(currentUrl)
+        });
+
+    </script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #424242;
+        /*background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(24,27,32,1) 35%, rgba(29,29,29,1) 100%);*/
+
+        background: linear-gradient(150deg, #000000, rgb(29, 26, 48), #151a33);
+        background-size: 600% 600%;
+
+        -webkit-animation: animationbackground 159s ease infinite;
+        -moz-animation: animationbackground 159s ease infinite;
+        animation: animationbackground 159s ease infinite;
+        font-family: 'Abril Fatface', cursive;
+        min-height: 100vh;
+}
+
+    a {
+        font-family: monospace;
+        color: white;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+}
+
+    p {
+        color: white;
+        font-size: 180%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Questrial', sans-serif;
+        
+}
+
+    h1 {
+        color: white;
+        font-size: 600%;
+
+        letter-spacing: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Days One', sans-serif;
+
+        background-color: #ffffff;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(150deg, #fe8bff, #8f62ff, white);
+        background-size: 400% 400%;
+        -webkit-animation: AnimationName 5s ease infinite;
+        -moz-animation: AnimationName 5s ease infinite;
+        animation: AnimationName 5s ease infinite;
+}
+
+    .video {
+        /*/
+        border-color: red;
+        border-radius: 20px;
+        border-style: solid;
+        /*/
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+    iframe {
+        border-style: solid;
+        outline-style: none;
+        border-color: rgb(240, 160, 94);
+
+        border-radius: 40px;
+        border-color: white;
+        border-width: 0px;
+}
+
+    .copierURL {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1%;
+}
+
+    #copy-url-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.432);
+
+}
+
+
+    .bouton {
+        padding-top: 2%;
+
+        display: flex;
+        margin: 0% 35%;
+        justify-content: space-around;
+        align-items: center;
+}
+
+    #change-video-button {
+        appearance: none;
+}
+
+
+
+
+    #change-video-button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 0px solid rgba(0, 0, 0, 0.6);
+}
+    
+    .coolSpan {
+        color: rgb(0, 0, 0);
+        font-size: 190%;
+        font-weight: 500;
+        letter-spacing: 0px;
+        font-family: 'Days One', sans-serif;
+}
+
+    #texteDiscret {
+        font-family: monospace;
+        
+}
+
+    #link {
+        /* caca*/
+        border: none;
+        outline: none;
+  /* Ajouter des styles personnalisés */
+        background-color: #eaeaea00;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+
+
+
+}
+
+    #download-button {
+        /* caca*/
+        border: none;
+        outline: none;
+  /* Ajouter des styles personnalisés */
+        background-color: #eaeaea00;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+}
+
+    .coolSpan i {
+    color: white /* Change the color to your desired color */
+}
+    
+    #change-video-button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+    #change-video-button:hover span {
+        animation: storm 0.7s ease-in-out both;
+        animation-delay: 0.06s;
+}
+
+    #change-video-button:after {
+    animation: rotate 0.7s ease-in-out both;
+}
+
+    #change-video-button:after span {
+        animation: storm 0.7s ease-in-out both;
+        animation-delay: 0.06s;
+}
+
+
+    .buttonApi-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Adjust the width as per your needs */
+        height: 100%; /* Adjust the height as per your needs */
+        border-radius: 0px;
+        overflow: hidden;
+        margin-top: 2%;
+
+}
+
+    #buttonApi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%; /* Adjust the width as per your needs */
+        height: 50%; /* Adjust the height as per your needs */
+        border-radius: 30px;
+        border-style: solid;
+        border-color: whitesmoke;
+        border-width: 2px;
+
+        opacity: 70%;
+        filter: hue-rotate(60deg);
+}
+
+
+    .hidden {
+    display: none;
+}
+
+
+    
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+        25% {
+            transform: rotate(3deg) translate3d(0, 0, 0);
+        }
+        50% {
+            transform: rotate(-3deg) translate3d(0, 0, 0);
+        }
+        75% {
+            transform: rotate(1deg) translate3d(0, 0, 0);
+        }
+        100% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes storm {
+        0% {
+            transform: translate3d(0, 0, 0) translateZ(0);
+        }
+        25% {
+            transform: translate3d(4px, 0, 0) translateZ(0);
+        }
+        50% {
+            transform: translate3d(-3px, 0, 0) translateZ(0);
+        }
+        75% {
+            transform: translate3d(2px, 0, 0) translateZ(0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) translateZ(0);
+        }
+
+}
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+}
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+}
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+}
+
+
+    @-webkit-keyframes animationbackground {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+}
+    @-moz-keyframes animationbackground {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+}
+    @keyframes animationbackground {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+}
+
+
+    #link:active,
+    #download-button:active {
+        transform: scale(0.9); /* Réduire la taille de l'élément */
+    }
+
+    /* Ou utilisez une animation personnalisée */
+    @keyframes buttonClickAnimation {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.7);
+        }
+        100% {
+            transform: scale(3);
+        }
+    }
+
+
+    #link:hover,
+    #download-button:hover {
+        transform: scale(1.1);
+    }
+
+    #link:active,
+    #download-button:active {
+        animation-name: buttonClickAnimation;
+        animation-duration: 30ms;
+    }
+
+    #buttonApi:hover {
+        opacity: 100%;
+    }
+
+
+</style>
+
+
+
+</html>
