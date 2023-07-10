@@ -14,7 +14,7 @@
 <body>
     <a id="support" href="https://distrokid.com/hyperfollow/martinfrechet/parabole">Support me</a>
 
-    <a href="fractal-one-file.html"><h1>FRACTAL</h1></a>
+    <a href="fractal-one-file.html"><h1 class="animated-gradient">FRACTAL</h1></a>
     <p>More jazz, more ambient, more gems</p>
 
     <div class="video">
@@ -479,6 +479,29 @@
         100% {
             transform: scale(3);
         }
+    }
+
+
+    @keyframes gradient-animation {
+        0% {
+            color: violet;
+        }
+        50% {
+            color: pink;
+        }
+        100% {
+            color: violet;
+        }
+        }
+
+    .animated-gradient {
+    font-size: 600%;
+    letter-spacing: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Days One', sans-serif;
+    animation: gradient-animation 5s linear infinite;
     }
 
 
