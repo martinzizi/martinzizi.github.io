@@ -41,7 +41,7 @@
     <div class="buttonApi-container hidden">
         <iframe id="buttonApi" src="https://yt-download.org/api/single/mp3?url=https://youtu.be/aocHVcJnJl8" allowtransparency="true" scrolling="no"></iframe>
     </div>
-    
+
 
 </body>
 
@@ -170,8 +170,9 @@
 
         document.querySelector("#link").addEventListener("click", function() {
             const currentUrl = document.querySelector("#video-frame").src;
-            navigator.clipboard.writeText(currentUrl)
+            navigator.clipboard.writeText(currentUrl);
         });
+
 
     </script>
 
