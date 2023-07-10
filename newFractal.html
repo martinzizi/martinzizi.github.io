@@ -87,11 +87,70 @@
             "t00wRXugr3o",
             "IqeyWU1zVA8",
             "rc3kpcUkchw",
-            "EEEEL5uY3_8"
+            "EEEEL5uY3_8",
+            "WdZ3821-k8Y",
+            "kMXTn_WEYsE",
+        ];
+
+        const liste_navarro = [
+            "hE3Uksan_RE",
+            "qf4QZibJRuw",
+            "4IZWNq1PtDE",
+            "XyJm-cHVegc",
+            "Vdz_9jIdaro",
+            "jFhdwhBRDqo",
+            "TNo4ZFsgXHo",
+            "AqIsQy8yZEM",
+            "mIreW3xLWzM",
+            "oT4JarkhfOI",
+            "MciMLg_OALM",
+            "1our7D7n5ys",
+            "AeFsiM8YPf4",
+            "ECraCI5BK6A",
+            "o52vpeE37s4",
+            "17MntCvdB9I",
+            "WJHjuObQVcg",
+            "fsDGehtZFIQ",
+            "YDU76SOAL4s",
+            "ptkldNsjBlE",
+            "IstSTjWaMiU",
+            "79Uya3ahXDk",
+            "08rVFBBabFA",
+            "GYSSaNCylsY",
+            "eQzvQeRfC8g",
+            "swD74NzDZpE",
+            "LLOa8G5dmoU",
+            "CeTS1V001X4",
+            "ntVSQeFhi_M",
+            "lPfNQYczz1U",
+            "TSmwcumRJkM",
+            "O0tCOVyoDkQ",
+            "f7gWg2LGz7g",
+            "CQM-1BQxsrU",
+            "4jwl9YtHhtE",
+            "a3_aZZCw4rM",
+            "hZqnmEYcrGM",
+            "_NLV0-X6ujU",
+            "ghLUZxsB0zo",
+            "qWtjx2a7G3g",
+            "IRzMU1u_dHw",
+            "WstsiNzgcDQ",
+            "xlf7aJP9yC0",
+            "5C-mr18lQvQ",
+            "XLygwopoNPY",
+            "7P_Mr-otC-M",
+            "HgMngxMB1ZQ",
+            "UXfWsC0NCwc",
+            "QqQQCGoTuXs",
+            "iPd9f6wjJkI",
+            "aQMZziuihq0",
+            "kjRD9hyOF14",
+            "tiLyN7MKSgQ"
         ];
 
         document.querySelector("#change-video-button").addEventListener("click", function() {
-            const random_video = liste_ambiante[Math.floor(Math.random() * liste_ambiante.length)];
+            const mergedList = liste_ambiante.concat(liste_navarro);
+            const random_video = mergedList[Math.floor(Math.random() * mergedList.length)];
             const video_id = `https://www.youtube.com/embed/${random_video}`;
 
             document.querySelector("#video-frame").src = `${video_id}?autoplay=1`;
